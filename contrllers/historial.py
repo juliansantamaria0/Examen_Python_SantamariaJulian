@@ -5,13 +5,13 @@ def view_by_category(collection):
     print("3. Ver por stock")
     print("4. Ver por precio")
     print("5. Regresar al Menu Principal")
-    opcion = input("Selecciona una opcion (1-4): ")
+    opcion = input("Selecciona una opcion (1-5): ")
 
     if opcion == '1':
         print("nombre:")
         found = False
         for elem in collection:
-            if elem.tipo.lower() == 'nombre':
+            if elem.nombre.lower() == 'nombre':
                 print(f"- {elem.nombre}")
                 found = True
         if not found:
@@ -20,7 +20,7 @@ def view_by_category(collection):
         print("descripciones en la coleccion:")
         found = False
         for elem in collection:
-            if elem.tipo.lower() == 'descripcion':
+            if elem.descripcion.lower() == 'descripcion':
                 print(f"- {elem.descripcion})")
                 found = True
         if not found:
@@ -29,7 +29,7 @@ def view_by_category(collection):
         print("stock en la colección:")
         found = False
         for elem in collection:
-            if elem.tipo.lower() == 'stock':
+            if elem.stock.lower() == 'stock':
                 print(f"- {elem.stock} )")
                 found = True
         if not found:
@@ -38,7 +38,7 @@ def view_by_category(collection):
         print("precios en la colección:")
         found = False
         for elem in collection:
-            if elem.tipo.lower() == 'precio':
+            if elem.precio.lower() == 'precio':
                 print(f"- {elem.precio} )")
                 found = True
         if not found:
